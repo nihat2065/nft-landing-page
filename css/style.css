@@ -8,10 +8,10 @@
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Arvo', serif;
   --font-code: 'Roboto', monospace;
-  --bg-color: #00163f;
-  --font-color: #ffffff;
+  --bg-color: #080808;
+  --font-color: #0a4814;
   --btn-bg-color: #ffffff;
-  --accent-color: #be7efe;
+  --accent-color: #0a4814;
   --header-shadow: #000 0px 0px 5px;
 }
 
@@ -20,7 +20,31 @@
   margin: 0;
   box-sizing: border-box;
 }
+#video {
+  position: fixed;
+  z-index: -1;
 
+}
+@media (min-aspect-ratio : 16/9) {
+  #video{
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio :16/9){
+  #video{
+    width: 100%;
+    height: auto;
+    }
+}
+@media (max-width :767px){
+  #video{
+    display: none;
+  }body{
+    background: url('poster.jpg');
+    background-size: cover;
+  }
+}
 body {
   background-color: var(--bg-color);
   display: flex;
